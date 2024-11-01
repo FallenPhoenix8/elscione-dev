@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer theme {
+  * {
+    outline: transparent;
+    @apply transition-colors duration-150 ease-linear;
+  }
+
+  :root {
+    /* Border radius */
+    --item-radius: 0.5rem;
+
+    /* Paddings and margins */
+    --margin-section: 1rem;
+  }
+
+  .dark-mode {
+    /* Dark mode colors */
+    --background-color: #020617;
+
+    --background-color-active: #6b7280;
+    --background-color-secondary: #0f172a;
+    --text-color: #f8fafc;
+    --text-color-secondary: #64748b;
+    --primary: #0d9488;
+  }
+
+  .light-mode {
+    /* Light mode colors */
+    --background-color: #f8fafc;
+    --background-color-active: #f9fafb;
+    --background-color-secondary: #e2e8f0;
+    --text-color: #020617;
+    --text-color-secondary: #64748b;
+    --primary: #2dd4bf;
+  }
+}
+@layer components {
+  h2 {
+    @apply ~text-xl/3xl capitalize;
+  }
+
+  h3 {
+    @apply ~text-lg/xl text-text-secondary;
+  }
+}
