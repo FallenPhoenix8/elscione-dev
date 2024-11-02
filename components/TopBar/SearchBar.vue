@@ -5,6 +5,8 @@ const searchPathElement = ref<SVGPathElement | null>(null)
 onMounted(() => {
   setPathLength(searchPathElement.value!)
 })
+
+const lightNovelQuery = useState("lightNovelQuery")
 </script>
 <template>
   <div class="search">
@@ -13,6 +15,7 @@ onMounted(() => {
       placeholder="Search for a light novel..."
       name="search"
       class="search-input"
+      v-model="lightNovelQuery"
     />
     <button class="icon w-8 h-8 p-1 text-text-secondary">
       <svg
@@ -41,7 +44,7 @@ onMounted(() => {
 }
 
 .icon {
-  @apply bg-opacity-20 bg-transparent rounded-radius ml-1;
+  @apply bg-opacity-10 bg-transparent rounded-radius ml-1;
 }
 
 .search:has(:focus) .icon {
@@ -58,10 +61,6 @@ onMounted(() => {
 
 .search-input:focus {
   @apply border-text text-text;
-}
-
-path {
-  stroke-dasharray: var(--length) var(--length);
 }
 
 .icon:hover path,

@@ -20,7 +20,7 @@
     /* Dark mode colors */
     --background-color: #020617;
 
-    --background-color-active: #6b7280;
+    --background-color-active: #4b5563;
     --background-color-secondary: #0f172a;
     --text-color: #f8fafc;
     --text-color-secondary: #64748b;
@@ -30,7 +30,7 @@
   .light-mode {
     /* Light mode colors */
     --background-color: #f8fafc;
-    --background-color-active: #f9fafb;
+    --background-color-active: #cbd5e1;
     --background-color-secondary: #e2e8f0;
     --text-color: #020617;
     --text-color-secondary: #64748b;
